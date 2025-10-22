@@ -3,12 +3,14 @@ package biblioteca;
 public class Libro {
     private String titulo;
     private String autor;
+    private String isbn;
     private boolean prestado;
 
-    public Libro(String titulo, String autor,) {
+    public Libro(String titulo, String autor, String isbn) {
         this.titulo = titulo;
         this.autor = autor;
         this.prestado = false;
+        this.isbn = isbn;
     }
 
     public String getTitulo() {
@@ -29,6 +31,14 @@ public class Libro {
 
     public boolean isPrestado() {
         return prestado;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
     }
 
     public void setPrestado(boolean prestado) {
@@ -53,6 +63,6 @@ public class Libro {
     }
 
     public void mostrarInfo(){
-        System.out.println("Titulo: " + titulo + ", autor: " + autor + ", prestado: " + prestado);
+        System.out.println("Titulo: " + titulo + ", Autor: " + autor + ", ISBN: " + isbn + ", Prestado: " + prestado);
     }
 }
