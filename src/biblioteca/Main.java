@@ -10,7 +10,9 @@ public class Main {
         String titulo = sc.nextLine();
         System.out.println("Ingrese el autor del libro: ");
         String autor = sc.nextLine();
-        Libro libro = new Libro(titulo,autor);
+        System.out.println("Ingrese el ISBN del libro: ");
+        String isbn = sc.nextLine();
+        Libro libro = new Libro(titulo,autor,isbn);
 
         System.out.println("\nOpciones: ");
         System.out.println("1. Prestar libro");
